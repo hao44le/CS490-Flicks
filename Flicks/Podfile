@@ -1,0 +1,3 @@
+pod 'IQKeyboardManager'
+pod ‘AFNetworking’
+pod ‘MJExtension’
