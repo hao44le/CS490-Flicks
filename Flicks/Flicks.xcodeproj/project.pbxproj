@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A96509CFBB4B37CE9BD85B06 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD2D4BEA83A05FCE56CC88 /* libPods.a */; };
 		C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C787591C40098800E85BB4 /* AppDelegate.swift */; };
 		C0C7875C1C40098800E85BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C7875B1C40098800E85BB4 /* ViewController.swift */; };
 		C0C7875F1C40098800E85BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C7875D1C40098800E85BB4 /* Main.storyboard */; };
 		C0C787611C40098800E85BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C787601C40098800E85BB4 /* Assets.xcassets */; };
 		C0C787641C40098800E85BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C787621C40098800E85BB4 /* LaunchScreen.storyboard */; };
+		C0C7876C1C400DB200E85BB4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C7876B1C400DB200E85BB4 /* Helper.swift */; };
+		C0C787711C40134200E85BB4 /* HanabiCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C787701C40134200E85BB4 /* HanabiCollectionViewLayout.swift */; };
+		C0C787741C40168F00E85BB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C787731C40168F00E85BB4 /* CollectionViewCell.swift */; };
+		F1DBF1EE410EBB848D09B951 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E670D86B6CB62F64E8AB69 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43CD8287933553C451722E00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC5A2BE866D1E6903B92C7C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		BFAD2D4BEA83A05FCE56CC88 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C787561C40098800E85BB4 /* Flicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C787591C40098800E85BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C7875B1C40098800E85BB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,11 @@
 		C0C787601C40098800E85BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0C787631C40098800E85BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0C787651C40098800E85BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0C7876B1C400DB200E85BB4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C0C7876F1C400E0D00E85BB4 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Header.h; path = ../Header.h; sourceTree = "<group>"; };
+		C0C787701C40134200E85BB4 /* HanabiCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanabiCollectionViewLayout.swift; sourceTree = "<group>"; };
+		C0C787731C40168F00E85BB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C2E670D86B6CB62F64E8AB69 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96509CFBB4B37CE9BD85B06 /* libPods.a in Frameworks */,
+				F1DBF1EE410EBB848D09B951 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,7 @@
 		C0C7874D1C40098800E85BB4 = {
 			isa = PBXGroup;
 			children = (
+				C0C787721C40154600E85BB4 /* Library */,
 				C0C787581C40098800E85BB4 /* Flicks */,
 				C0C787571C40098800E85BB4 /* Products */,
 				6004C5597A338E5D9CCE784F /* Pods */,
@@ -70,9 +78,12 @@
 		C0C787581C40098800E85BB4 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				C0C7876F1C400E0D00E85BB4 /* Header.h */,
 				C0C787591C40098800E85BB4 /* AppDelegate.swift */,
 				C0C7875B1C40098800E85BB4 /* ViewController.swift */,
+				C0C7876B1C400DB200E85BB4 /* Helper.swift */,
 				C0C7875D1C40098800E85BB4 /* Main.storyboard */,
+				C0C787731C40168F00E85BB4 /* CollectionViewCell.swift */,
 				C0C787601C40098800E85BB4 /* Assets.xcassets */,
 				C0C787621C40098800E85BB4 /* LaunchScreen.storyboard */,
 				C0C787651C40098800E85BB4 /* Info.plist */,
@@ -80,10 +91,18 @@
 			path = Flicks;
 			sourceTree = "<group>";
 		};
+		C0C787721C40154600E85BB4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C0C787701C40134200E85BB4 /* HanabiCollectionViewLayout.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		E15BB5CE2DDB678DCD838946 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD2D4BEA83A05FCE56CC88 /* libPods.a */,
+				C2E670D86B6CB62F64E8AB69 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C787741C40168F00E85BB4 /* CollectionViewCell.swift in Sources */,
 				C0C7875C1C40098800E85BB4 /* ViewController.swift in Sources */,
 				C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */,
+				C0C787711C40134200E85BB4 /* HanabiCollectionViewLayout.swift in Sources */,
+				C0C7876C1C400DB200E85BB4 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +351,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geleichen.Flicks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Debug;
 		};
@@ -341,6 +364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geleichen.Flicks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 			};
 			name = Release;
 		};
