@@ -11,8 +11,10 @@ import UIKit
 
 class ViewController: UIViewController{
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.registerClass(CollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cell")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -28,14 +30,13 @@ class ViewController: UIViewController{
 
 extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return 9
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cellIdentifier = "cell"
+        let cellIdentifier = "cellIdentifier"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! CollectionViewCell
-        cell.imageView?.image = imageAtIndex(indexPath.row % 8)
-        
+        cell.imageView?.image = imageAtIndex(indexPath.row)
         return cell
     }
     
@@ -44,10 +45,6 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
-    }
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = ScreenSize.SCREEN_WIDTH / 2
-        return CGSizeMake(width, width/2)
     }
     
 }
