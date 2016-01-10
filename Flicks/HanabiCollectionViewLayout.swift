@@ -9,9 +9,9 @@
 import UIKit
 
 @IBDesignable public class HanabiCollectionViewLayout: UICollectionViewLayout {
-    @IBInspectable public var standartHeight: CGFloat = 100.0
-    @IBInspectable public var focusedHeight: CGFloat = 280.0
-    @IBInspectable public var dragOffset: CGFloat = 180.0
+    @IBInspectable public var standartHeight: CGFloat = 200.0
+    @IBInspectable public var focusedHeight: CGFloat = 380.0
+    @IBInspectable public var dragOffset: CGFloat = 80.0
     
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
     

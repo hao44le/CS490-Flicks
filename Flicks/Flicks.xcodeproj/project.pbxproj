@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02367DE1C41E5C60089D5DF /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02367DD1C41E5C60089D5DF /* NetWorkManager.swift */; };
+		C02367E51C41E75B0089D5DF /* MovieNowPlayingCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02367E41C41E75B0089D5DF /* MovieNowPlayingCallback.swift */; };
+		C02367E81C41E8050089D5DF /* MovieNowPlayingCallback_result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02367E71C41E8050089D5DF /* MovieNowPlayingCallback_result.swift */; };
+		C02367EC1C41F0CB0089D5DF /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C02367E91C41F0CB0089D5DF /* ProgressHUD.bundle */; };
+		C02367ED1C41F0CB0089D5DF /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */; };
+		C02367F01C41F0FB0089D5DF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02367EF1C41F0FB0089D5DF /* Tool.swift */; };
 		C0259F331C41D12800E4E2F0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0259F321C41D12800E4E2F0 /* CollectionViewCell.swift */; };
 		C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C787591C40098800E85BB4 /* AppDelegate.swift */; };
 		C0C7875C1C40098800E85BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C7875B1C40098800E85BB4 /* ViewController.swift */; };
@@ -21,6 +27,13 @@
 /* Begin PBXFileReference section */
 		43CD8287933553C451722E00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC5A2BE866D1E6903B92C7C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C02367DD1C41E5C60089D5DF /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		C02367E41C41E75B0089D5DF /* MovieNowPlayingCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieNowPlayingCallback.swift; sourceTree = "<group>"; };
+		C02367E71C41E8050089D5DF /* MovieNowPlayingCallback_result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieNowPlayingCallback_result.swift; sourceTree = "<group>"; };
+		C02367E91C41F0CB0089D5DF /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		C02367EA1C41F0CB0089D5DF /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		C02367EF1C41F0FB0089D5DF /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		C0259F321C41D12800E4E2F0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C0C787561C40098800E85BB4 /* Flicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C787591C40098800E85BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +69,72 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C02367DF1C41E7000089D5DF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C02367DD1C41E5C60089D5DF /* NetWorkManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		C02367E01C41E70D0089D5DF /* HanbaiLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C0C787701C40134200E85BB4 /* HanabiCollectionViewLayout.swift */,
+			);
+			name = HanbaiLayout;
+			sourceTree = "<group>";
+		};
+		C02367E11C41E71B0089D5DF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C0C7876B1C400DB200E85BB4 /* Helper.swift */,
+				C02367EF1C41F0FB0089D5DF /* Tool.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		C02367E21C41E72F0089D5DF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C0C7876F1C400E0D00E85BB4 /* Header.h */,
+				C0C787591C40098800E85BB4 /* AppDelegate.swift */,
+				C0C7875D1C40098800E85BB4 /* Main.storyboard */,
+				C0C787601C40098800E85BB4 /* Assets.xcassets */,
+				C0C787621C40098800E85BB4 /* LaunchScreen.storyboard */,
+				C0C787651C40098800E85BB4 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		C02367E31C41E7360089D5DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0C7875B1C40098800E85BB4 /* ViewController.swift */,
+				C0259F321C41D12800E4E2F0 /* CollectionViewCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C02367E61C41E7680089D5DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C02367E41C41E75B0089D5DF /* MovieNowPlayingCallback.swift */,
+				C02367E71C41E8050089D5DF /* MovieNowPlayingCallback_result.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C02367EE1C41F0CF0089D5DF /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C02367E91C41F0CB0089D5DF /* ProgressHUD.bundle */,
+				C02367EA1C41F0CB0089D5DF /* ProgressHUD.h */,
+				C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		C0C7874D1C40098800E85BB4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,15 +157,11 @@
 		C0C787581C40098800E85BB4 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
-				C0C7876F1C400E0D00E85BB4 /* Header.h */,
-				C0C787591C40098800E85BB4 /* AppDelegate.swift */,
-				C0C7875B1C40098800E85BB4 /* ViewController.swift */,
-				C0259F321C41D12800E4E2F0 /* CollectionViewCell.swift */,
-				C0C7876B1C400DB200E85BB4 /* Helper.swift */,
-				C0C7875D1C40098800E85BB4 /* Main.storyboard */,
-				C0C787601C40098800E85BB4 /* Assets.xcassets */,
-				C0C787621C40098800E85BB4 /* LaunchScreen.storyboard */,
-				C0C787651C40098800E85BB4 /* Info.plist */,
+				C02367E61C41E7680089D5DF /* Model */,
+				C02367DF1C41E7000089D5DF /* Manager */,
+				C02367E11C41E71B0089D5DF /* Helper */,
+				C02367E31C41E7360089D5DF /* Controller */,
+				C02367E21C41E72F0089D5DF /* Application */,
 			);
 			path = Flicks;
 			sourceTree = "<group>";
@@ -94,7 +169,8 @@
 		C0C787721C40154600E85BB4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C0C787701C40134200E85BB4 /* HanabiCollectionViewLayout.swift */,
+				C02367EE1C41F0CF0089D5DF /* ProgressHUD */,
+				C02367E01C41E70D0089D5DF /* HanbaiLayout */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -168,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02367EC1C41F0CB0089D5DF /* ProgressHUD.bundle in Resources */,
 				C0C787641C40098800E85BB4 /* LaunchScreen.storyboard in Resources */,
 				C0C787611C40098800E85BB4 /* Assets.xcassets in Resources */,
 				C0C7875F1C40098800E85BB4 /* Main.storyboard in Resources */,
@@ -229,10 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02367ED1C41F0CB0089D5DF /* ProgressHUD.m in Sources */,
 				C0259F331C41D12800E4E2F0 /* CollectionViewCell.swift in Sources */,
 				C0C7875C1C40098800E85BB4 /* ViewController.swift in Sources */,
+				C02367E81C41E8050089D5DF /* MovieNowPlayingCallback_result.swift in Sources */,
+				C02367F01C41F0FB0089D5DF /* Tool.swift in Sources */,
+				C02367DE1C41E5C60089D5DF /* NetWorkManager.swift in Sources */,
 				C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */,
 				C0C787711C40134200E85BB4 /* HanabiCollectionViewLayout.swift in Sources */,
+				C02367E51C41E75B0089D5DF /* MovieNowPlayingCallback.swift in Sources */,
 				C0C7876C1C400DB200E85BB4 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

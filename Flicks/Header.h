@@ -10,10 +10,9 @@
 #define Header_h
 
 #import "IQKeyboardManager.h"
-#import "UIImageView+WebCache.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ProgressHUD.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
-
-#import <AFNetworking/AFNetworking.h>
+#import "AFHTTPRequestOperationManager.h"
 #endif /* Header_h */
