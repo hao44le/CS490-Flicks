@@ -9,13 +9,13 @@
 import UIKit
 
 
-class ViewController: UIViewController,UICollectionViewDataSource{
+class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
   
   var movieArray : NSMutableArray = []
   var pageNum:NSString = "1"
   var isHeaderRefresh = false
   
-  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController,UICollectionViewDataSource{
     ServerMethod.sharedInstance.getListOfReviews({ (array:NSMutableArray) -> Void in
       Tool.dismissHUD()
       self.movieArray = array
-      self.collectionView.reloadData()
+      self.tableView.reloadData()
       }) { (error:NSError) -> Void in
         print(error)
     }
@@ -46,9 +46,9 @@ class ViewController: UIViewController,UICollectionViewDataSource{
     header.setTitle("Loading ...", forState: MJRefreshState.Refreshing)
     header.stateLabel?.textColor = UIColor.whiteColor()
       header.lastUpdatedTimeLabel?.hidden = true
-    self.collectionView.mj_header = header
+    self.tableView.mj_header = header
     
-    self.collectionView.mj_footer = MJRefreshAutoFooter(refreshingBlock: { () -> Void in
+    self.tableView.mj_footer = MJRefreshAutoFooter(refreshingBlock: { () -> Void in
       let num = self.pageNum.integerValue + 1
       self.pageNum = String(num)
       self.refreshData()
@@ -59,11 +59,11 @@ class ViewController: UIViewController,UICollectionViewDataSource{
     Tool.showProgressHUD("Loading more moviews")
     ServerMethod.sharedInstance.getListOfReviewsByPage(self.pageNum as String, completeBlock: { (array:NSArray) -> Void in
       Tool.dismissHUD()
-      if self.collectionView.mj_header.isRefreshing(){
-        self.collectionView.mj_header.endRefreshing()
+      if self.tableView.mj_header.isRefreshing(){
+        self.tableView.mj_header.endRefreshing()
       }
-      if self.collectionView.mj_footer.isRefreshing(){
-        self.collectionView.mj_footer.endRefreshing()
+      if self.tableView.mj_footer.isRefreshing(){
+        self.tableView.mj_footer.endRefreshing()
       }
       if self.isHeaderRefresh{
         self.movieArray.removeAllObjects()
@@ -73,11 +73,11 @@ class ViewController: UIViewController,UICollectionViewDataSource{
         self.movieArray.addObject(item)
       }
       if 20 < array.count{
-        self.collectionView.mj_footer.removeFromSuperview()
+        self.tableView.mj_footer.removeFromSuperview()
       }else{
         self.setupCollectionRefresh()
       }
-      self.collectionView.reloadData()
+      self.tableView.reloadData()
       
       }) { (erro:NSError) -> Void in
         
@@ -91,31 +91,24 @@ class ViewController: UIViewController,UICollectionViewDataSource{
     // Dispose of any resources that can be recreated.
   }
   
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return movieArray.count
   }
   
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    var cellIdentifier = ""
-    if indexPath.row % 2 == 0 {
-      cellIdentifier = "cellIdentifier"
-    } else {
-      cellIdentifier = "evenCell"
-    }
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! CollectionViewCell
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cellIdentifier = "cell"
+    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DiscoverCell
     let object = movieArray[indexPath.row] as! MovieNowPlayingCallback_result
     let url = NSURL(string: ServerConstant.getImageUrlByPath(object.poster_path))
-    cell.imageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
-    cell.titleLabel.text = object.original_title
+    cell.logoImageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
+    cell.posterImageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
+    cell.titleLabel.text = object.title
     cell.descriptionLabel.text = object.overview
-    if indexPath.row % 2 == 0 {
-      cell.descriptionLabel.textColor = UIColor.blackColor()
-    } else {
-      cell.descriptionLabel.textColor = UIColor.whiteColor()
-    }
     return cell
   }
-  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+  }
   
 }
 
