@@ -34,7 +34,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             self.movieArray = array
             self.tableView.reloadData()
             }) { (error:NSError) -> Void in
-                print(error)
+                Tool.showErrorHUD("There is an network error")
         }
     }
     func setupCollectionRefresh(){

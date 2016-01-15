@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="929" y="-392"/>
         </scene>
-        <!--First View Controller-->
+        <!--Flicks-->
         <scene sceneID="hdt-hf-NZe">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="0cS-Bu-MGc" customClass="FirstViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
@@ -195,7 +195,7 @@
                             <constraint firstItem="pjX-bo-GvI" firstAttribute="leading" secondItem="nvD-gz-JbD" secondAttribute="leading" id="nxA-oC-ZRY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sfT-0n-YSN"/>
+                    <navigationItem key="navigationItem" title="Flicks" id="sfT-0n-YSN"/>
                     <connections>
                         <outlet property="searchBar" destination="pjX-bo-GvI" id="6TC-RX-4bM"/>
                         <outlet property="tableView" destination="nvD-gz-JbD" id="Kei-vZ-qgF"/>
