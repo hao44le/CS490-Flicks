@@ -9,15 +9,15 @@
 import UIKit
 
 class DiscoverCell: UITableViewCell {
-  @IBOutlet weak var logoImageView: UIImageView!
-
-  @IBOutlet weak var titleLabel: KMGillSansLightLabel!
-
-  @IBOutlet weak var posterImageView: UIImageView!
-  
-  @IBOutlet weak var descriptionLabel: UITextView! {
-    didSet{
-      self.descriptionLabel.sizeToFit()
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: KMGillSansLightLabel!
+    
+    @IBOutlet weak var posterImageView: UIImageView!
+    
+    @IBOutlet weak var descriptionLabel: UITextView! {
+        didSet{
+            self.descriptionLabel.sizeToFit()
+        }
     }
-  }
 }

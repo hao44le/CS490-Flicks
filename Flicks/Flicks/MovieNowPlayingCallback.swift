@@ -9,15 +9,15 @@
 import Foundation
 
 class MovieNowPlayingCallback : NSObject {
-  var page : NSNumber!
-  var results : NSArray!
-  var dates : MovieNowPlayingCallback_dates!
-  var total_pages : NSNumber!
-  var total_results : NSNumber!
+    var page : NSNumber!
+    var results : NSArray!
+    var dates : MovieNowPlayingCallback_dates!
+    var total_pages : NSNumber!
+    var total_results : NSNumber!
 }
 
 class MovieNowPlayingCallback_dates : NSObject {
-  var maximum : String!
-  var minimum : String!
+    var maximum : String!
+    var minimum : String!
 }
 
