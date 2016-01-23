@@ -30,7 +30,6 @@ class TopRatedController: UIViewController,UITableViewDataSource,UITableViewDele
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
         
-        self.tabBarController!.hidesBottomBarWhenPushed = true
         self.callServerMethod()
         self.setupCollectionRefresh()
         self.refreshData()
@@ -152,6 +151,9 @@ class TopRatedController: UIViewController,UITableViewDataSource,UITableViewDele
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("toDetail", sender: self)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
     

@@ -30,20 +30,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-0g-CO0" userLabel="Poster">
-                                                    <rect key="frame" x="10" y="10" width="130" height="230"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-JJ-ndi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="230"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="IhS-JJ-ndi" firstAttribute="top" secondItem="9ha-0g-CO0" secondAttribute="top" id="Jbd-Sk-z6D"/>
-                                                        <constraint firstAttribute="bottom" secondItem="IhS-JJ-ndi" secondAttribute="bottom" id="kfq-5r-JTQ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="IhS-JJ-ndi" secondAttribute="trailing" id="pV1-qt-3RW"/>
-                                                        <constraint firstItem="IhS-JJ-ndi" firstAttribute="leading" secondItem="9ha-0g-CO0" secondAttribute="leading" id="z5G-A5-71K"/>
-                                                    </constraints>
-                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcQ-R3-Ldl" userLabel="image">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                                     <subviews>
@@ -57,6 +43,20 @@
                                                         <constraint firstAttribute="bottom" secondItem="sQ7-FO-9LI" secondAttribute="bottom" id="4zR-4r-2e9"/>
                                                         <constraint firstItem="sQ7-FO-9LI" firstAttribute="leading" secondItem="NcQ-R3-Ldl" secondAttribute="leading" id="9xr-mO-wQa"/>
                                                         <constraint firstAttribute="trailing" secondItem="sQ7-FO-9LI" secondAttribute="trailing" id="vmo-E5-jDO"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-0g-CO0" userLabel="Poster">
+                                                    <rect key="frame" x="10" y="10" width="130" height="230"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-JJ-ndi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="230"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="IhS-JJ-ndi" firstAttribute="top" secondItem="9ha-0g-CO0" secondAttribute="top" id="Jbd-Sk-z6D"/>
+                                                        <constraint firstAttribute="bottom" secondItem="IhS-JJ-ndi" secondAttribute="bottom" id="kfq-5r-JTQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IhS-JJ-ndi" secondAttribute="trailing" id="pV1-qt-3RW"/>
+                                                        <constraint firstItem="IhS-JJ-ndi" firstAttribute="leading" secondItem="9ha-0g-CO0" secondAttribute="leading" id="z5G-A5-71K"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-Py-S2C" userLabel="BottomName">
@@ -184,6 +184,7 @@
                     <connections>
                         <outlet property="searchBar" destination="Gmf-2I-jhr" id="6rP-Lo-TYl"/>
                         <outlet property="tableView" destination="M5j-wS-MEH" id="1u2-aj-HP1"/>
+                        <segue destination="Ufh-Ba-M1N" kind="show" identifier="toDetail" id="11Z-Dr-LOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwL-hq-2cM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,25 +233,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-NH-qLx" userLabel="Poster">
-                                                    <rect key="frame" x="10" y="10" width="130" height="230"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-C3-IaQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="230"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="6Mb-C3-IaQ" secondAttribute="trailing" id="4mX-1X-S9w"/>
-                                                        <constraint firstItem="6Mb-C3-IaQ" firstAttribute="leading" secondItem="3bd-NH-qLx" secondAttribute="leading" id="Iu8-va-p7G"/>
-                                                        <constraint firstItem="6Mb-C3-IaQ" firstAttribute="top" secondItem="3bd-NH-qLx" secondAttribute="top" id="QxI-5T-G9h"/>
-                                                        <constraint firstAttribute="width" constant="130" id="jFz-nr-qnL"/>
-                                                        <constraint firstAttribute="bottom" secondItem="6Mb-C3-IaQ" secondAttribute="bottom" id="qmq-vO-dH9"/>
-                                                    </constraints>
-                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-H1-nJX" userLabel="image">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-aF-Zug">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljn-aF-Zug">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                                         </imageView>
                                                     </subviews>
@@ -260,6 +246,21 @@
                                                         <constraint firstItem="ljn-aF-Zug" firstAttribute="leading" secondItem="QPF-H1-nJX" secondAttribute="leading" id="RF7-Zs-leC"/>
                                                         <constraint firstItem="ljn-aF-Zug" firstAttribute="top" secondItem="QPF-H1-nJX" secondAttribute="top" id="cPJ-L5-4St"/>
                                                         <constraint firstAttribute="bottom" secondItem="ljn-aF-Zug" secondAttribute="bottom" id="mgc-Q3-8Zd"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-NH-qLx" userLabel="Poster">
+                                                    <rect key="frame" x="10" y="10" width="130" height="230"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-C3-IaQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="230"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="6Mb-C3-IaQ" secondAttribute="trailing" id="4mX-1X-S9w"/>
+                                                        <constraint firstItem="6Mb-C3-IaQ" firstAttribute="leading" secondItem="3bd-NH-qLx" secondAttribute="leading" id="Iu8-va-p7G"/>
+                                                        <constraint firstItem="6Mb-C3-IaQ" firstAttribute="top" secondItem="3bd-NH-qLx" secondAttribute="top" id="QxI-5T-G9h"/>
+                                                        <constraint firstAttribute="width" constant="130" id="jFz-nr-qnL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6Mb-C3-IaQ" secondAttribute="bottom" id="qmq-vO-dH9"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiA-ci-EDS" userLabel="BottomName">
@@ -382,7 +383,7 @@
                     <connections>
                         <outlet property="searchBar" destination="pjX-bo-GvI" id="6TC-RX-4bM"/>
                         <outlet property="tableView" destination="nvD-gz-JbD" id="Kei-vZ-qgF"/>
-                        <segue destination="Ufh-Ba-M1N" kind="show" id="Axe-Jt-uU4"/>
+                        <segue destination="Ufh-Ba-M1N" kind="show" identifier="toDetail" id="Axe-Jt-uU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV3-6w-Ejf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -463,4 +464,7 @@
         <image name="Movie" width="25" height="25"/>
         <image name="shadow_asset" width="160" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="11Z-Dr-LOH"/>
+    </inferredMetricsTieBreakers>
 </document>

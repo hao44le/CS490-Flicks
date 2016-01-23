@@ -18,12 +18,8 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var movieDetails : MovieNowPlayingCallback_result!
     
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +27,6 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
         
-        self.tabBarController!.hidesBottomBarWhenPushed = true
         self.callServerMethod()
         self.setupCollectionRefresh()
         self.refreshData()
@@ -148,12 +143,27 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
         let url = NSURL(string: ServerConstant.getImageUrlByPath(object.poster_path))
         cell.logoImageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
         cell.posterImageView?.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
+        cell.posterImageView?.alpha = 0
+        UIView.animateWithDuration(0.3) { () -> Void in
+            cell.posterImageView?.alpha = 1
+        }
         cell.titleLabel.text = object.title
         cell.descriptionLabel.text = object.overview
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        var object : MovieNowPlayingCallback_result!
+        if filteredMovies.count != 0 {
+            object = filteredMovies[indexPath.row] as! MovieNowPlayingCallback_result
+        } else {
+            object = movieArray[indexPath.row] as! MovieNowPlayingCallback_result
+        }
+        self.movieDetails = object
+        self.performSegueWithIdentifier("toDetail", sender: self)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dv = segue.destinationViewController as! DetailViewController
+        dv.movieDetails = movieDetails
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {

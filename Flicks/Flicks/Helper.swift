@@ -12,7 +12,10 @@ class Utils: NSObject {
     static let mainColor = UIColor.blackColor()
     
     static let tabbarColor = UIColor(white: 1, alpha: 0.8)
+    
 }
+
+
 
 //Device Info
 struct ScreenSize
