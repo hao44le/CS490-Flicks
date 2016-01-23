@@ -8,6 +8,12 @@
 
 import UIKit
 
+class Utils: NSObject {
+    static let mainColor = UIColor.blackColor()
+    
+    static let tabbarColor = UIColor(white: 1, alpha: 0.8)
+}
+
 //Device Info
 struct ScreenSize
 {
@@ -28,58 +34,5 @@ struct DeviceType
     
 }
 
-struct ServerConstant {
-    static let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-    static let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)"
-    static let imageUrl = "https://image.tmdb.org/t/p/w342"
-    
-    static func getUrlByPage(page:String) -> String{
-        return url + "&page=\(page)"
-    }
-    
-    static func getImageUrlByPath(path:String?) -> String{
-        if path != nil {
-            return imageUrl + path!
-        } else {
-            return imageUrl
-        }
-    }
-}
-
-class ServerMethod {
-    static let sharedInstance = ServerMethod()
-    
-    let manager = NetWorkManager()
-    
-    func getListOfReviews(completeBlock: (NSMutableArray) -> Void, failed: (NSError) -> Void){
-        let result : NSMutableArray = []
-        manager.GET(ServerConstant.url, parameters: nil, success: { (op:AFHTTPRequestOperation, response:AnyObject) -> Void in
-            let callback = MovieNowPlayingCallback.mj_objectWithKeyValues(response)
-            for element in callback.results {
-                let movie = MovieNowPlayingCallback_result.mj_objectWithKeyValues(element)
-                result.addObject(movie)
-            }
-            completeBlock(result)
-            }) { (op:AFHTTPRequestOperation?, error:NSError) -> Void in
-                failed(error)
-        }
-    }
-    
-    func getListOfReviewsByPage(page:String,completeBlock: (NSArray) -> Void, failed: (NSError) -> Void){
-        var result : [MovieNowPlayingCallback_result] = []
-        manager.GET(ServerConstant.getUrlByPage(page), parameters: nil, success: { (op:AFHTTPRequestOperation, response:AnyObject) -> Void in
-            let callback = MovieNowPlayingCallback.mj_objectWithKeyValues(response)
-            for element in callback.results {
-                let movie = MovieNowPlayingCallback_result.mj_objectWithKeyValues(element)
-                result.append(movie)
-            }
-            completeBlock(result)
-            }) { (op:AFHTTPRequestOperation?, error:NSError) -> Void in
-                failed(error)
-        }
-    }
-    
-    
-}
 
 

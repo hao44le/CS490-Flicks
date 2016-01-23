@@ -18,9 +18,20 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.barTintColor = Utils.mainColor
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
         
+        self.tabBarController!.hidesBottomBarWhenPushed = true
         self.callServerMethod()
         self.setupCollectionRefresh()
         self.refreshData()
@@ -29,7 +40,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     func callServerMethod(){
         Tool.showProgressHUD("Loading")
-        ServerMethod.sharedInstance.getListOfReviews({ (array:NSMutableArray) -> Void in
+        ServerMethod.sharedInstance.getNowPlaying({ (array:NSMutableArray) -> Void in
             Tool.dismissHUD()
             self.movieArray = array
             self.tableView.reloadData()
@@ -59,7 +70,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     func refreshData(){
         Tool.showProgressHUD("Loading more moviews")
-        ServerMethod.sharedInstance.getListOfReviewsByPage(self.pageNum as String, completeBlock: { (array:NSArray) -> Void in
+        ServerMethod.sharedInstance.getNowPlayingByPage(self.pageNum as String, completeBlock: { (array:NSArray) -> Void in
             Tool.dismissHUD()
             if self.tableView.mj_header.isRefreshing(){
                 self.tableView.mj_header.endRefreshing()
@@ -86,12 +97,35 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
     }
     
-    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if scrollView.panGestureRecognizer.translationInView(scrollView).y < 0{
+            changeTabBar(true, animated: true)
+        }
+        else{
+            changeTabBar(false, animated: true)
+        }
+    }
+    func changeTabBar(hidden:Bool, animated: Bool){
+        let tabBar = self.tabBarController!.tabBar
+        if tabBar.hidden == hidden{ return }
+        let frame = tabBar.frame
+        let offset = (hidden ? (frame.size.height) : -(frame.size.height))
+        let duration:NSTimeInterval = (animated ? 0.5 : 0.0)
+        tabBar.hidden = false
+        
+        UIView.animateWithDuration(duration,
+            animations: {tabBar.frame = CGRectOffset(frame, 0, offset)},
+            completion: {
+                if $0 {tabBar.hidden = hidden}
+        })
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if filteredMovies.count != 0 {

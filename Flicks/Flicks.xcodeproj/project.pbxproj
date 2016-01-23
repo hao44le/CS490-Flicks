@@ -14,8 +14,12 @@
 		C02367ED1C41F0CB0089D5DF /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */; };
 		C02367F01C41F0FB0089D5DF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02367EF1C41F0FB0089D5DF /* Tool.swift */; };
 		C0259F331C41D12800E4E2F0 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0259F321C41D12800E4E2F0 /* DiscoverCell.swift */; };
-		C069EB921C44AF9500443C44 /* KMGillSansLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C069EB911C44AF9500443C44 /* KMGillSansLabel.m */; };
-		C069EB961C44AFC900443C44 /* UIFont+GillSansFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = C069EB951C44AFC900443C44 /* UIFont+GillSansFonts.m */; };
+		C0BBEABB1C5320D4006E2DA7 /* KMGillSansLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEABA1C5320D4006E2DA7 /* KMGillSansLabel.m */; };
+		C0BBEABE1C5320EA006E2DA7 /* UIFont+GillSansFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEABD1C5320EA006E2DA7 /* UIFont+GillSansFonts.m */; };
+		C0BBEAC01C532215006E2DA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEABF1C532215006E2DA7 /* DetailViewController.swift */; };
+		C0BBEAC21C532520006E2DA7 /* MovieTopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEAC11C532520006E2DA7 /* MovieTopRated.swift */; };
+		C0BBEAC61C53273B006E2DA7 /* ServerConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEAC51C53273B006E2DA7 /* ServerConstant.swift */; };
+		C0BBEAC81C53274A006E2DA7 /* ServerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBEAC71C53274A006E2DA7 /* ServerMethod.swift */; };
 		C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C787591C40098800E85BB4 /* AppDelegate.swift */; };
 		C0C7875C1C40098800E85BB4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C7875B1C40098800E85BB4 /* FirstViewController.swift */; };
 		C0C7875F1C40098800E85BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C7875D1C40098800E85BB4 /* Main.storyboard */; };
@@ -36,10 +40,14 @@
 		C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		C02367EF1C41F0FB0089D5DF /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		C0259F321C41D12800E4E2F0 /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
-		C069EB901C44AF9500443C44 /* KMGillSansLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMGillSansLabel.h; sourceTree = "<group>"; };
-		C069EB911C44AF9500443C44 /* KMGillSansLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMGillSansLabel.m; sourceTree = "<group>"; };
-		C069EB941C44AFC900443C44 /* UIFont+GillSansFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GillSansFonts.h"; sourceTree = "<group>"; };
-		C069EB951C44AFC900443C44 /* UIFont+GillSansFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GillSansFonts.m"; sourceTree = "<group>"; };
+		C0BBEAB91C5320D4006E2DA7 /* KMGillSansLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMGillSansLabel.h; sourceTree = "<group>"; };
+		C0BBEABA1C5320D4006E2DA7 /* KMGillSansLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMGillSansLabel.m; sourceTree = "<group>"; };
+		C0BBEABC1C5320EA006E2DA7 /* UIFont+GillSansFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GillSansFonts.h"; sourceTree = "<group>"; };
+		C0BBEABD1C5320EA006E2DA7 /* UIFont+GillSansFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GillSansFonts.m"; sourceTree = "<group>"; };
+		C0BBEABF1C532215006E2DA7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C0BBEAC11C532520006E2DA7 /* MovieTopRated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTopRated.swift; sourceTree = "<group>"; };
+		C0BBEAC51C53273B006E2DA7 /* ServerConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConstant.swift; sourceTree = "<group>"; };
+		C0BBEAC71C53274A006E2DA7 /* ServerMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerMethod.swift; sourceTree = "<group>"; };
 		C0C787561C40098800E85BB4 /* Flicks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C787591C40098800E85BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0C7875B1C40098800E85BB4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				C0C7876B1C400DB200E85BB4 /* Helper.swift */,
+				C0BBEAC51C53273B006E2DA7 /* ServerConstant.swift */,
+				C0BBEAC71C53274A006E2DA7 /* ServerMethod.swift */,
 				C02367EF1C41F0FB0089D5DF /* Tool.swift */,
 			);
 			name = Helper;
@@ -108,6 +118,7 @@
 			children = (
 				C0C7875B1C40098800E85BB4 /* FirstViewController.swift */,
 				C0259F321C41D12800E4E2F0 /* DiscoverCell.swift */,
+				C0BBEABF1C532215006E2DA7 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 			children = (
 				C02367E41C41E75B0089D5DF /* MovieNowPlayingCallback.swift */,
 				C02367E71C41E8050089D5DF /* MovieNowPlayingCallback_result.swift */,
+				C0BBEAC11C532520006E2DA7 /* MovieTopRated.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,17 +141,6 @@
 				C02367EB1C41F0CB0089D5DF /* ProgressHUD.m */,
 			);
 			name = ProgressHUD;
-			sourceTree = "<group>";
-		};
-		C069EB931C44AF9900443C44 /* KMGillSansLabel */ = {
-			isa = PBXGroup;
-			children = (
-				C069EB941C44AFC900443C44 /* UIFont+GillSansFonts.h */,
-				C069EB951C44AFC900443C44 /* UIFont+GillSansFonts.m */,
-				C069EB901C44AF9500443C44 /* KMGillSansLabel.h */,
-				C069EB911C44AF9500443C44 /* KMGillSansLabel.m */,
-			);
-			name = KMGillSansLabel;
 			sourceTree = "<group>";
 		};
 		C0C7874D1C40098800E85BB4 = {
@@ -176,7 +177,10 @@
 		C0C787721C40154600E85BB4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C069EB931C44AF9900443C44 /* KMGillSansLabel */,
+				C0BBEABC1C5320EA006E2DA7 /* UIFont+GillSansFonts.h */,
+				C0BBEABD1C5320EA006E2DA7 /* UIFont+GillSansFonts.m */,
+				C0BBEAB91C5320D4006E2DA7 /* KMGillSansLabel.h */,
+				C0BBEABA1C5320D4006E2DA7 /* KMGillSansLabel.m */,
 				C02367EE1C41F0CF0089D5DF /* ProgressHUD */,
 			);
 			name = Library;
@@ -313,17 +317,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BBEAC61C53273B006E2DA7 /* ServerConstant.swift in Sources */,
+				C0BBEAC01C532215006E2DA7 /* DetailViewController.swift in Sources */,
 				C02367ED1C41F0CB0089D5DF /* ProgressHUD.m in Sources */,
 				C0259F331C41D12800E4E2F0 /* DiscoverCell.swift in Sources */,
 				C0C7875C1C40098800E85BB4 /* FirstViewController.swift in Sources */,
+				C0BBEAC21C532520006E2DA7 /* MovieTopRated.swift in Sources */,
 				C02367E81C41E8050089D5DF /* MovieNowPlayingCallback_result.swift in Sources */,
 				C02367F01C41F0FB0089D5DF /* Tool.swift in Sources */,
 				C02367DE1C41E5C60089D5DF /* NetWorkManager.swift in Sources */,
+				C0BBEABB1C5320D4006E2DA7 /* KMGillSansLabel.m in Sources */,
+				C0BBEABE1C5320EA006E2DA7 /* UIFont+GillSansFonts.m in Sources */,
 				C0C7875A1C40098800E85BB4 /* AppDelegate.swift in Sources */,
-				C069EB961C44AFC900443C44 /* UIFont+GillSansFonts.m in Sources */,
+				C0BBEAC81C53274A006E2DA7 /* ServerMethod.swift in Sources */,
 				C02367E51C41E75B0089D5DF /* MovieNowPlayingCallback.swift in Sources */,
 				C0C7876C1C400DB200E85BB4 /* Helper.swift in Sources */,
-				C069EB921C44AF9500443C44 /* KMGillSansLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +445,7 @@
 			baseConfigurationReference = AC5A2BE866D1E6903B92C7C7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Flicks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geleichen.Flicks;
@@ -450,6 +459,7 @@
 			baseConfigurationReference = 43CD8287933553C451722E00 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Flicks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.geleichen.Flicks;
