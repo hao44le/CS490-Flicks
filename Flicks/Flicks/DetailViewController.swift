@@ -51,16 +51,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: ServerConstant.getImageUrlByPath(self.movieDetails.poster_path))
-        self.backgroundImage = UIImageView(frame: CGRectMake(0, 64, ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT - 64))
-        self.backgroundImage.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
-        self.view.addSubview(self.backgroundImage)
-        var poster_path : String!
+        
+        configureBackground()
+        addScrollView()
         //  var adult : Bool?
         var overview : String!
-        var release_date : String!
-        var genre_ids : NSMutableArray!
-        var id : NSNumber!
         var original_title : String!
         var original_language : String!
         var Movietitle : String!
@@ -69,6 +64,38 @@ class DetailViewController: UIViewController {
         //  var video : Bool?
         var vote_average : NSNumber!
         // Do any additional setup after loading the view.
+    }
+    func configureBackground(){
+        let url = NSURL(string: ServerConstant.getImageUrlByPath(self.movieDetails.poster_path))
+        self.backgroundImage = UIImageView(frame: CGRectMake(0, 64, ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT - 64))
+        self.backgroundImage.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeHolder"))
+        self.view.addSubview(self.backgroundImage)
+        
+        self.title = self.movieDetails.title
+    }
+    func addScrollView(){
+        
+        
+        
+        let scroll = UIScrollView(frame: CGRectMake(0,ScreenSize.SCREEN_HEIGHT * 0.7,ScreenSize.SCREEN_WIDTH,ScreenSize.SCREEN_HEIGHT))
+        
+        
+        
+        let release_dateLabel = UILabel(frame: CGRectMake(0,0,ScreenSize.SCREEN_WIDTH,20))
+        release_dateLabel.text = "Realease Date : " + self.movieDetails.release_date
+        release_dateLabel.textColor = UIColor.whiteColor()
+        release_dateLabel.textAlignment = NSTextAlignment.Center
+        scroll.addSubview(release_dateLabel)
+        
+        let original_titleLabel = UILabel(frame: CGRectMake(0,20,ScreenSize.SCREEN_WIDTH,20))
+        original_titleLabel.text = "Original Title : " + self.movieDetails.original_title
+        original_titleLabel.textColor = UIColor.whiteColor()
+        original_titleLabel.textAlignment = NSTextAlignment.Center
+        scroll.addSubview(original_titleLabel)
+        
+        
+        
+        self.view.addSubview(scroll)
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillAppear(animated)
