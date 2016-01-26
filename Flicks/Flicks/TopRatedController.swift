@@ -17,7 +17,7 @@ class TopRatedController: UIViewController,UITableViewDataSource,UITableViewDele
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
+    var movieDetails : MovieNowPlayingCallback_result!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -151,11 +151,20 @@ class TopRatedController: UIViewController,UITableViewDataSource,UITableViewDele
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var object : MovieNowPlayingCallback_result!
+        if filteredMovies.count != 0 {
+            object = filteredMovies[indexPath.row] as! MovieNowPlayingCallback_result
+        } else {
+            object = movieArray[indexPath.row] as! MovieNowPlayingCallback_result
+        }
+        self.movieDetails = object
         self.performSegueWithIdentifier("toDetail", sender: self)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        let dv = segue.destinationViewController as! DetailViewController
+        dv.movieDetails = movieDetails
     }
+
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {

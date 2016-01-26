@@ -54,16 +54,6 @@ class DetailViewController: UIViewController {
         
         configureBackground()
         addScrollView()
-        //  var adult : Bool?
-        var overview : String!
-        var original_title : String!
-        var original_language : String!
-        var Movietitle : String!
-        var popularity : NSNumber!
-        var vote_count : String!
-        //  var video : Bool?
-        var vote_average : NSNumber!
-        // Do any additional setup after loading the view.
     }
     func configureBackground(){
         let url = NSURL(string: ServerConstant.getImageUrlByPath(self.movieDetails.poster_path))
@@ -78,20 +68,31 @@ class DetailViewController: UIViewController {
         
         
         let scroll = UIScrollView(frame: CGRectMake(0,ScreenSize.SCREEN_HEIGHT * 0.7,ScreenSize.SCREEN_WIDTH,ScreenSize.SCREEN_HEIGHT))
+        scroll.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
+        scroll.layer.shadowColor = UIColor.blackColor().CGColor
+        scroll.layer.shadowOffset = CGSize(width: 1, height: 1)
         
         
-        
-        let release_dateLabel = UILabel(frame: CGRectMake(0,0,ScreenSize.SCREEN_WIDTH,20))
-        release_dateLabel.text = "Realease Date : " + self.movieDetails.release_date
+        let release_dateLabel = UILabel(frame: CGRectMake(10,0,ScreenSize.SCREEN_WIDTH - 10,20))
+        release_dateLabel.text = "Realease Date: " + self.movieDetails.release_date
         release_dateLabel.textColor = UIColor.whiteColor()
-        release_dateLabel.textAlignment = NSTextAlignment.Center
+//        release_dateLabel.textAlignment = NSTextAlignment.Center
         scroll.addSubview(release_dateLabel)
         
-        let original_titleLabel = UILabel(frame: CGRectMake(0,20,ScreenSize.SCREEN_WIDTH,20))
-        original_titleLabel.text = "Original Title : " + self.movieDetails.original_title
+        let original_titleLabel = UILabel(frame: CGRectMake(10,20,ScreenSize.SCREEN_WIDTH - 10,20))
+        original_titleLabel.text = "Original Title: " + self.movieDetails.original_title
         original_titleLabel.textColor = UIColor.whiteColor()
-        original_titleLabel.textAlignment = NSTextAlignment.Center
+//        original_titleLabel.textAlignment = NSTextAlignment.Center
         scroll.addSubview(original_titleLabel)
+        
+        let overview_titleLabel = UILabel(frame: CGRectMake(10,40,ScreenSize.SCREEN_WIDTH - 10,100))
+        overview_titleLabel.text = "overview Title: " + self.movieDetails.overview
+        overview_titleLabel.textColor = UIColor.whiteColor()
+//        overview_titleLabel.textAlignment = NSTextAlignment.Center
+        overview_titleLabel.numberOfLines = 0
+        scroll.addSubview(overview_titleLabel)
+        
+        
         
         
         
